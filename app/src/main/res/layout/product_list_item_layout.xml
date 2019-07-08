@@ -9,9 +9,11 @@
         android:id="@+id/product_item_imageview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minWidth="128dp"
-        android:minHeight="128dp"
-        android:layout_margin="8dp"
+        android:minWidth="100dp"
+        android:minHeight="100dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:src="@drawable/ic_placeholder"
         android:contentDescription="@null"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,32 +21,44 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/product_item_title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:maxLines="2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@id/product_item_imageview"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:text="@tools:sample/lorem/random"/>
+            android:id="@+id/product_item_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:maxLines="2"
+            android:textColor="@color/dark"
+            android:textSize="18sp"
+            app:fontFamily="@font/roboto_medium"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/product_item_imageview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/product_item_precoDe"
+            tools:text="@tools:sample/lorem/random"/>
 
     <TextView
-        android:id="@+id/product_item_precoDe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="@id/product_item_title"
-        app:layout_constraintTop_toBottomOf="@id/product_item_title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:text="De: 9999,99"/>
+            android:id="@+id/product_item_precoDe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:fontFamily="@font/roboto_medium"
+            app:layout_constraintStart_toStartOf="@id/product_item_title"
+            app:layout_constraintTop_toBottomOf="@id/product_item_title"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="De: 9999,99"/>
 
     <TextView
-        android:id="@+id/product_item_precoPor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/product_item_title"
-        app:layout_constraintEnd_toEndOf="@id/product_item_title"
-        app:layout_constraintBottom_toBottomOf="parent"
-        tools:text="Por: 9999,99"/>
+            android:id="@+id/product_item_precoPor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/tomato"
+            android:textSize="20sp"
+            app:fontFamily="@font/roboto_bold"
+            app:layout_constraintTop_toBottomOf="@id/product_item_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:text="Por: 9999,99"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
