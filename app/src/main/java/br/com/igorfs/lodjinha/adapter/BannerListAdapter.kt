@@ -8,10 +8,10 @@ import br.com.igorfs.lodjinha.vo.HomeBannerVo
 
 class BannerListAdapter : Adapter<BannerListViewHolder>() {
 
-    private var headerList: ArrayList<HomeBannerVo> = arrayListOf()
+    private var headerList: List<HomeBannerVo> = arrayListOf()
 
     fun loadItems(newList: List<HomeBannerVo>) {
-        headerList.addAll(newList)
+        headerList = newList
         notifyDataSetChanged()
     }
 
